@@ -5,6 +5,7 @@
         "packages/*"
     ],
     "scripts": {
+        "dev:hash-data-flat": "npm run dev -w @lab-react-router/hash-data-flat",
         "build:all": "npm run build --workspaces"
     }
 }
