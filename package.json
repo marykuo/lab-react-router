@@ -6,6 +6,7 @@
     ],
     "scripts": {
         "dev:hash-data-flat": "npm run dev -w @lab-react-router/hash-data-flat",
+        "dev:hash-data-nested": "npm run dev -w @lab-react-router/hash-data-nested",
         "build:all": "npm run build --workspaces"
     }
 }
