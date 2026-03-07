@@ -8,6 +8,7 @@
         "dev:hash-data-flat": "npm run dev -w @lab-react-router/hash-data-flat",
         "dev:hash-data-flat-lazy": "npm run dev -w @lab-react-router/hash-data-flat-lazy",
         "dev:hash-data-nested": "npm run dev -w @lab-react-router/hash-data-nested",
+        "dev:hash-data-nested-lazy": "npm run dev -w @lab-react-router/hash-data-nested-lazy",
         "dev:hash-legacy-flat": "npm run dev -w @lab-react-router/hash-legacy-flat",
         "dev:hash-legacy-nested": "npm run dev -w @lab-react-router/hash-legacy-nested",
         "build:all": "npm run build --workspaces"
