@@ -1,20 +1,27 @@
-import { createHashRouter, RouterProvider, Link } from "react-router-dom";
-import Home from "./pages/Home";
-import About from "./pages/About";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 // 1. Create the router instance
 const router = createHashRouter([
   {
     path: "/",
-    element: <Home />,
+    lazy: async () => {
+      const { default: Home } = await import("./pages/Home");
+      return { Component: Home };
+    },
   },
   {
     path: "/about",
-    element: <About />,
+    lazy: async () => {
+      const { default: About } = await import("./pages/About");
+      return { Component: About };
+    },
   },
   {
-    path: "*", // Catch-all route
-    element: <Home />,
+    path: "*",
+    lazy: async () => {
+      const { default: Home } = await import("./pages/Home");
+      return { Component: Home };
+    },
   },
 ]);
 
