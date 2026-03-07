@@ -6,7 +6,7 @@ function MainLayout() {
     <>
       <Navbar />
       <main>
-        {/* 子路由元件將會渲染在這裡 */}
+        {/* child route component 將會渲染在這裡 */}
         <Outlet />
       </main>
     </>
