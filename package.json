@@ -11,6 +11,7 @@
         "dev:hash-data-nested-lazy": "npm run dev -w @lab-react-router/hash-data-nested-lazy",
         "dev:hash-legacy-flat": "npm run dev -w @lab-react-router/hash-legacy-flat",
         "dev:hash-legacy-nested": "npm run dev -w @lab-react-router/hash-legacy-nested",
+        "dev:hash-legacy-nested-lazy": "npm run dev -w @lab-react-router/hash-legacy-nested-lazy",
         "build:all": "npm run build --workspaces"
     }
 }
