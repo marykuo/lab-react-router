@@ -1,6 +1,5 @@
 import { createHashRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import MainLayout from "./pages/MainLayout";
 
@@ -15,7 +14,10 @@ const router = createHashRouter([
       },
       {
         path: "about",
-        element: <About />,
+        lazy: async () => {
+          const { default: About } = await import("./pages/About");
+          return { Component: About };
+        },
       },
       {
         path: "*",
