@@ -90,6 +90,12 @@ const router = createHashRouter([
         path: "my-metrics/:metricsId?/subId?/:subId?",
         Component: DashboardMetrics,
       },
+      // Splat
+      // A splat is a special kind of dynamic segment that matches the rest of the URL.
+      {
+        path: "my-setting/*",
+        Component: DashboardSetting,
+      },
       {
         path: "*",
         // rendering JSX elements directly makes it easier to pass props

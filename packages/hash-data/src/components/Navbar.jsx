@@ -54,6 +54,18 @@ export function Navbar() {
           show subId 'abc' without metricsId
         </Link>
       </p>
+
+      <p>
+        {"Splat: "}
+        <br />
+        <Link to="my-setting/123-abc">
+          show my setting with splat '123-abc'
+        </Link>
+        <br />
+        <Link to="my-setting/123/abc/xyz">
+          show my setting with splat '123/abc/xyz'
+        </Link>
+      </p>
     </nav>
   );
 }
