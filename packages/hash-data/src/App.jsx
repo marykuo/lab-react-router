@@ -2,6 +2,7 @@ import { createHashRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import MainLayout from "./pages/MainLayout";
+import DashboardHome from "./pages/DashboardHome";
 import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMetrics from "./pages/DashboardMetrics";
 import DashboardSetting from "./pages/DashboardSetting";
@@ -29,6 +30,28 @@ const router = createHashRouter([
         // setup a lazy route in one line using promise chaining
         lazy: async () =>
           import("./pages/Contact").then((m) => ({ Component: m.default })),
+      },
+      // Nested Routes
+      {
+        path: "dashboard",
+        Component: DashboardLayout,
+        children: [
+          {
+            // route to /dashboard
+            index: true,
+            Component: DashboardHome,
+          },
+          {
+            // route to /dashboard/metrics
+            path: "metrics",
+            Component: DashboardMetrics,
+          },
+          {
+            // route to /dashboard/setting
+            path: "setting",
+            Component: DashboardSetting,
+          },
+        ],
       },
       // Layout Routes
       {
