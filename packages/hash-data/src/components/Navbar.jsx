@@ -38,6 +38,22 @@ export function Navbar() {
         {" | "}
         <Link to="prefix/setting">prefix setting</Link>
       </p>
+
+      <p>
+        {"Dynamic Segment: "}
+        <br />
+        <Link to="my-metrics">show my metrics without metricsId and subId</Link>
+        <br />
+        <Link to="my-metrics/123">show metrics '123'</Link>
+        <br />
+        <Link to="my-metrics/123/subId/abc">
+          show metrics '123' with subId 'abc'
+        </Link>
+        <br />
+        <Link to="my-metrics//subId/abc">
+          show subId 'abc' without metricsId
+        </Link>
+      </p>
     </nav>
   );
 }

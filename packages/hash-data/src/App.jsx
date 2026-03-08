@@ -83,6 +83,13 @@ const router = createHashRouter([
           },
         ],
       },
+      // Dynamic Segment
+      // You can have multiple dynamic segments in one route path.
+      // You can have optional route segment or static segments.
+      {
+        path: "my-metrics/:metricsId?/subId?/:subId?",
+        Component: DashboardMetrics,
+      },
       {
         path: "*",
         // rendering JSX elements directly makes it easier to pass props
