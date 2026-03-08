@@ -22,6 +22,13 @@ export function Navbar() {
         {" | "}
         <Link to="dashboard/setting">dashboard setting</Link>
       </p>
+
+      <p>
+        {"Route Prefix: "}
+        <Link to="prefix/metrics">prefix metrics</Link>
+        {" | "}
+        <Link to="prefix/setting">prefix setting</Link>
+      </p>
     </nav>
   );
 }

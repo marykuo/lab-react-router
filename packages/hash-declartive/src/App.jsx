@@ -38,6 +38,14 @@ function App() {
           <Route path="setting" element={<DashboardSetting />} />
         </Route>
 
+        {/* Route Prefix */}
+        <Route path="prefix">
+          {/* route to /prefix/metrics */}
+          <Route path="metrics" element={<DashboardMetrics />} />
+          {/* route to /prefix/setting */}
+          <Route path="setting" element={<DashboardSetting />} />
+        </Route>
+
         {/* catch-all route for undefined paths */}
         <Route path="*" element={<NotFound />} />
       </Routes>
