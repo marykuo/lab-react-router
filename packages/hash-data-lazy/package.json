@@ -1,5 +1,5 @@
 {
-  "name": "@lab-react-router/hash-declarative-nested",
+  "name": "@lab-react-router/hash-data-lazy",
   "private": true,
   "version": "0.0.0",
   "type": "module",

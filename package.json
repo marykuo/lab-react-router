@@ -5,13 +5,10 @@
         "packages/*"
     ],
     "scripts": {
-        "dev:hash-data-flat": "npm run dev -w @lab-react-router/hash-data-flat",
-        "dev:hash-data-flat-lazy": "npm run dev -w @lab-react-router/hash-data-flat-lazy",
-        "dev:hash-data-nested": "npm run dev -w @lab-react-router/hash-data-nested",
-        "dev:hash-data-nested-lazy": "npm run dev -w @lab-react-router/hash-data-nested-lazy",
-        "dev:hash-declarative-flat": "npm run dev -w @lab-react-router/hash-declarative-flat",
-        "dev:hash-declarative-nested": "npm run dev -w @lab-react-router/hash-declarative-nested",
-        "dev:hash-declarative-nested-lazy": "npm run dev -w @lab-react-router/hash-declarative-nested-lazy",
+        "dev:hash-data": "npm run dev -w @lab-react-router/hash-data",
+        "dev:hash-data-lazy": "npm run dev -w @lab-react-router/hash-data-lazy",
+        "dev:hash-declarative": "npm run dev -w @lab-react-router/hash-declarative",
+        "dev:hash-declarative-lazy": "npm run dev -w @lab-react-router/hash-declarative-lazy",
         "build:all": "npm run build --workspaces"
     }
 }
