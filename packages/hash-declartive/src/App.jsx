@@ -54,6 +54,10 @@ function App() {
           element={<DashboardMetrics />}
         />
 
+        {/* Splat */}
+        {/* A splat is a special kind of dynamic segment that matches the rest of the URL. */}
+        <Route path="my-setting/*" element={<DashboardSetting />} />
+
         {/* catch-all route for undefined paths */}
         <Route path="*" element={<NotFound />} />
       </Routes>
