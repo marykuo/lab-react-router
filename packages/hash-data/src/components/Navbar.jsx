@@ -15,6 +15,13 @@ export function Navbar() {
       </NavLink>
       {" | "}
       <Link to="contact">聯絡我們</Link>
+
+      <p>
+        {"Layout Routes: "}
+        <Link to="metrics">metrics</Link>
+        {" | "}
+        <Link to="setting">setting</Link>
+      </p>
     </nav>
   );
 }

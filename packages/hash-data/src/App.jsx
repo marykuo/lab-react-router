@@ -2,6 +2,9 @@ import { createHashRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import MainLayout from "./pages/MainLayout";
+import DashboardLayout from "./pages/DashboardLayout";
+import DashboardMetrics from "./pages/DashboardMetrics";
+import DashboardSetting from "./pages/DashboardSetting";
 
 const router = createHashRouter([
   {
@@ -26,6 +29,20 @@ const router = createHashRouter([
         // setup a lazy route in one line using promise chaining
         lazy: async () =>
           import("./pages/Contact").then((m) => ({ Component: m.default })),
+      },
+      // Layout Routes
+      {
+        Component: DashboardLayout,
+        children: [
+          {
+            path: "metrics",
+            Component: DashboardMetrics,
+          },
+          {
+            path: "setting",
+            Component: DashboardSetting,
+          },
+        ],
       },
       {
         path: "*",
