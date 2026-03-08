@@ -3,6 +3,7 @@ import { HashRouter, Routes, Route } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
 import NotFound from "./pages/NotFound";
+import DashboardHome from "./pages/DashboardHome";
 import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMetrics from "./pages/DashboardMetrics";
 import DashboardSetting from "./pages/DashboardSetting";
@@ -24,6 +25,16 @@ function App() {
           {/* route to /metrics */}
           <Route path="metrics" element={<DashboardMetrics />} />
           {/* route to /setting */}
+          <Route path="setting" element={<DashboardSetting />} />
+        </Route>
+
+        {/* Nested Routes */}
+        <Route path="dashboard" element={<DashboardLayout />}>
+          {/* route to /dashboard */}
+          <Route index element={<DashboardHome />} />
+          {/* route to /dashboard/metrics */}
+          <Route path="metrics" element={<DashboardMetrics />} />
+          {/* route to /dashboard/setting */}
           <Route path="setting" element={<DashboardSetting />} />
         </Route>
 
