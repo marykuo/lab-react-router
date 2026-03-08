@@ -1,4 +1,4 @@
-import { createHashRouter, RouterProvider } from "react-router";
+import { createBrowserRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import Error from "./pages/Error";
 import MainLayout from "./pages/MainLayout";
@@ -7,7 +7,10 @@ import DashboardLayout from "./pages/DashboardLayout";
 import DashboardMetrics from "./pages/DashboardMetrics";
 import DashboardSetting from "./pages/DashboardSetting";
 
-const router = createHashRouter([
+// You can replace createBrowserRouter with:
+// - createHashRouter to use hash route
+// - createMemoryRouter to use memory route (usually for testing or non-browser environments)
+const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout, // Global layout, shared across all pages

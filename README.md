@@ -1,7 +1,7 @@
 # lab-react-router
 
 這個 repo 用於練習 React Router v7。
-官方文件：https://reactrouter.com。
+官方文件：https://reactrouter.com
 
 目前 react-router 的最新版本是 7.13.1，因此這個 repo 會使用這個版本來練習。
 
@@ -33,8 +33,10 @@ Router Mode 有三種 strategy：
 
 ## Router Type
 
-Router Type 有三種：
-
-- HashRouter：透過 URL 的 `#` 錨點切換頁面，優點是完全不需要 Server 配置，適合部署在 GitHub Pages 這種靜態空間。
-- BrowserRouter：使用 HTML5 History API，所以 URL 沒有 `#`、最美觀，但如果重新整理頁面，Server 若沒設定好會回傳 404。
-- MemoryRouter：路由狀態存在記憶體中。主要用於單元測試（Testing）或非瀏覽器環境。
+- Browser Route：使用 HTML5 History API，所以 URL 沒有 `#`、最美觀。
+- Hash Route：透過 URL 的 `#` 錨點切換頁面，優點是完全不需要 Server 配置，適合部署在 GitHub Pages 這種靜態空間。
+- Memory Route：路由狀態存在記憶體中。主要用於單元測試（Testing）或非瀏覽器環境。
+- Static Route：用於 Server Side Rendering（SSR），不會處理路由變化，適合在伺服器端使用。
+  （本次練習不使用）
+- History Route：只支援 Declarative mode，屬於實驗中的功能，因此官方建議謹慎使用。
+  （本次練習不使用）
