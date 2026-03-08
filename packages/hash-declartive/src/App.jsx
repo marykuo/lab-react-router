@@ -1,8 +1,10 @@
+import { lazy } from "react";
 import { HashRouter, Routes, Route } from "react-router";
 import Navbar from "./components/Navbar";
 import Home from "./pages/Home";
-import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+
+const About = lazy(() => import("./pages/About"));
 
 function App() {
   return (
