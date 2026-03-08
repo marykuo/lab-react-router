@@ -6,7 +6,7 @@
     ],
     "scripts": {
         "dev:data-mode": "npm run dev -w @lab-react-router/data-mode",
-        "dev:hash-declarative": "npm run dev -w @lab-react-router/hash-declarative",
+        "dev:declarative-mode": "npm run dev -w @lab-react-router/declarative-mode",
         "build:all": "npm run build --workspaces"
     }
 }
