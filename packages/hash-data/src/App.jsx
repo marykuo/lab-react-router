@@ -2,19 +2,26 @@ import { createHashRouter, RouterProvider } from "react-router";
 import Home from "./pages/Home";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
+import MainLayout from "./pages/MainLayout";
 
 const router = createHashRouter([
   {
-    index: true,
-    element: <Home />,
-  },
-  {
-    path: "about",
-    element: <About />,
-  },
-  {
-    path: "*",
-    element: <NotFound />,
+    path: "/",
+    element: <MainLayout />, // Global layout, shared across all pages
+    children: [
+      {
+        index: true,
+        element: <Home />,
+      },
+      {
+        path: "about",
+        element: <About />,
+      },
+      {
+        path: "*",
+        element: <NotFound />,
+      },
+    ],
   },
 ]);
 
