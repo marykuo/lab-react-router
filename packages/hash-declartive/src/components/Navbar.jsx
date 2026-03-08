@@ -15,19 +15,19 @@ export function Navbar() {
       </NavLink>
 
       <p>
-        {"Layout Routes: "}
-        <Link to="metrics">metrics</Link>
-        {" | "}
-        <Link to="setting">setting</Link>
-      </p>
-
-      <p>
         {"Nested Routes: "}
         <Link to="dashboard">dashboard home</Link>
         {" | "}
         <Link to="dashboard/metrics">dashboard metrics</Link>
         {" | "}
         <Link to="dashboard/setting">dashboard setting</Link>
+      </p>
+
+      <p>
+        {"Layout Routes: "}
+        <Link to="metrics">metrics</Link>
+        {" | "}
+        <Link to="setting">setting</Link>
       </p>
 
       <p>

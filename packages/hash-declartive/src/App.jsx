@@ -20,14 +20,6 @@ function App() {
         <Route index element={<Home />} />
         <Route path="about" element={<About />} />
 
-        {/* Layout Routes */}
-        <Route element={<DashboardLayout />}>
-          {/* route to /metrics */}
-          <Route path="metrics" element={<DashboardMetrics />} />
-          {/* route to /setting */}
-          <Route path="setting" element={<DashboardSetting />} />
-        </Route>
-
         {/* Nested Routes */}
         <Route path="dashboard" element={<DashboardLayout />}>
           {/* route to /dashboard */}
@@ -35,6 +27,14 @@ function App() {
           {/* route to /dashboard/metrics */}
           <Route path="metrics" element={<DashboardMetrics />} />
           {/* route to /dashboard/setting */}
+          <Route path="setting" element={<DashboardSetting />} />
+        </Route>
+
+        {/* Layout Routes */}
+        <Route element={<DashboardLayout />}>
+          {/* route to /metrics */}
+          <Route path="metrics" element={<DashboardMetrics />} />
+          {/* route to /setting */}
           <Route path="setting" element={<DashboardSetting />} />
         </Route>
 
