@@ -13,6 +13,8 @@ export function Navbar() {
       >
         關於我們
       </NavLink>
+      {" | "}
+      <Link to="contact">聯絡我們</Link>
     </nav>
   );
 }
