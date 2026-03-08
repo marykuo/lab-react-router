@@ -67,6 +67,22 @@ const router = createHashRouter([
           },
         ],
       },
+      // Prefix Routes
+      {
+        path: "prefix",
+        children: [
+          {
+            // route to /prefix/metrics
+            path: "metrics",
+            Component: DashboardMetrics,
+          },
+          {
+            // route to /prefix/setting
+            path: "setting",
+            Component: DashboardSetting,
+          },
+        ],
+      },
       {
         path: "*",
         // rendering JSX elements directly makes it easier to pass props
