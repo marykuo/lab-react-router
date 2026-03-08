@@ -9,9 +9,9 @@
         "dev:hash-data-flat-lazy": "npm run dev -w @lab-react-router/hash-data-flat-lazy",
         "dev:hash-data-nested": "npm run dev -w @lab-react-router/hash-data-nested",
         "dev:hash-data-nested-lazy": "npm run dev -w @lab-react-router/hash-data-nested-lazy",
-        "dev:hash-legacy-flat": "npm run dev -w @lab-react-router/hash-legacy-flat",
-        "dev:hash-legacy-nested": "npm run dev -w @lab-react-router/hash-legacy-nested",
-        "dev:hash-legacy-nested-lazy": "npm run dev -w @lab-react-router/hash-legacy-nested-lazy",
+        "dev:hash-declarative-flat": "npm run dev -w @lab-react-router/hash-declarative-flat",
+        "dev:hash-declarative-nested": "npm run dev -w @lab-react-router/hash-declarative-nested",
+        "dev:hash-declarative-nested-lazy": "npm run dev -w @lab-react-router/hash-declarative-nested-lazy",
         "build:all": "npm run build --workspaces"
     }
 }

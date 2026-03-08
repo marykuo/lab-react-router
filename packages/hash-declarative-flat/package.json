@@ -1,5 +1,5 @@
 {
-  "name": "@lab-react-router/hash-legacy-flat",
+  "name": "@lab-react-router/hash-declarative-flat",
   "private": true,
   "version": "0.0.0",
   "type": "module",
