@@ -46,6 +46,13 @@ function App() {
           <Route path="setting" element={<DashboardSetting />} />
         </Route>
 
+        {/* Dynamic Segment */}
+        <Route path="my-metrics/:metricsId" element={<DashboardMetrics />} />
+        <Route
+          path="my-metrics/:metricsId/:subId"
+          element={<DashboardMetrics />}
+        />
+
         {/* catch-all route for undefined paths */}
         <Route path="*" element={<NotFound />} />
       </Routes>
