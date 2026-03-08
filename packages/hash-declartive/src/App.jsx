@@ -47,9 +47,10 @@ function App() {
         </Route>
 
         {/* Dynamic Segment */}
-        <Route path="my-metrics/:metricsId" element={<DashboardMetrics />} />
+        {/* You can have multiple dynamic segments in one route path. */}
+        {/* You can have optional route segment or static segments */}
         <Route
-          path="my-metrics/:metricsId/:subId"
+          path="my-metrics/:metricsId?/subId?/:subId?"
           element={<DashboardMetrics />}
         />
 
