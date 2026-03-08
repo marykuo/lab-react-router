@@ -5,7 +5,7 @@
         "packages/*"
     ],
     "scripts": {
-        "dev:hash-data": "npm run dev -w @lab-react-router/hash-data",
+        "dev:data-mode": "npm run dev -w @lab-react-router/data-mode",
         "dev:hash-declarative": "npm run dev -w @lab-react-router/hash-declarative",
         "build:all": "npm run build --workspaces"
     }
