@@ -8,6 +8,7 @@
         "dev:data-mode": "npm run dev -w @lab-react-router/data-mode",
         "dev:declarative-mode": "npm run dev -w @lab-react-router/declarative-mode",
         "dev:framework-mode": "npm run dev -w @lab-react-router/framework-mode",
+        "dev:framework-mode-fs": "npm run dev -w @lab-react-router/framework-mode-fs",
         "build:all": "npm run build --workspaces"
     }
 }
