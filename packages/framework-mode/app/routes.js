@@ -1,35 +1,32 @@
 import { index, layout, prefix, route } from "@react-router/dev/routes";
 
 export default [
-  index("routes/home.jsx"),
-  route("about", "routes/about.jsx"),
+  index("routes/Home.jsx"),
+  route("about", "routes/About.jsx"),
 
   // Nested Routes
-  route("dashboard", "dashboard/layout.jsx", [
+  route("dashboard", "dashboard/Layout.jsx", [
     // route to /dashboard
-    index("dashboard/home.jsx"),
-
-    // route to /dashboard/metrics
-    route("metrics", "dashboard/Metrics.jsx"),
+    index("dashboard/Home.jsx"),
 
     // Dynamic Segment
     // route to /dashboard/metric/:metricsId/:subId
-    route("dashboard/metric/:metricsId?/:subId?", "dashboard/metrics.jsx"),
+    route("dashboard/metric/:metricsId?/:subId?", "dashboard/Metrics.jsx"),
 
     // Splats
-    // route to /dashboard/setting
+    // route to /dashboard/setting*
     route("setting/*", "dashboard/Setting.jsx"),
   ]),
 
   // Route Prefixes
   ...prefix("marketing", [
     // Layout Routes
-    layout("marketing/layout.jsx", [
+    layout("marketing/Layout.jsx", [
       // route to /marketing with layout
-      index("marketing/home.jsx"),
+      index("marketing/Home.jsx"),
 
       // route to /marketing/contact
-      route("contact", "marketing/contact.jsx"),
+      route("contact", "marketing/Contact.jsx"),
     ]),
   ]),
 ];
