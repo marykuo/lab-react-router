@@ -9,6 +9,7 @@
         "dev:declarative-mode": "npm run dev -w @lab-react-router/declarative-mode",
         "dev:framework-mode": "npm run dev -w @lab-react-router/framework-mode",
         "dev:framework-mode-fs": "npm run dev -w @lab-react-router/framework-mode-fs",
-        "build:all": "npm run build --workspaces"
+        "build:all": "npm run build --workspaces",
+        "build:gh": "npm run build --workspaces"
     }
 }

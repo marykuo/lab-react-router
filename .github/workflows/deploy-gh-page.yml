@@ -27,7 +27,7 @@ jobs:
       - name: Install and Build
         run: |
           npm install
-          npm run build:all
+          npm run build:gh
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
