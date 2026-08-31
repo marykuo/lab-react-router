@@ -10,103 +10,108 @@ import DashboardSetting from "./pages/DashboardSetting";
 // You can replace createBrowserRouter with:
 // - createHashRouter to use hash route
 // - createMemoryRouter to use memory route (usually for testing or non-browser environments)
-const router = createBrowserRouter([
-  {
-    path: "/",
-    Component: MainLayout, // Global layout, shared across all pages
-    children: [
-      {
-        index: true,
-        // pass the class or function directly for internal instantiation
-        Component: Home,
-      },
-      {
-        path: "about",
-        // setup a lazy route via async function to reduce initial bundle size
-        lazy: async () => {
-          const { default: About } = await import("./pages/About");
-          return { Component: About };
+const router = createBrowserRouter(
+  [
+    {
+      path: "/",
+      Component: MainLayout, // Global layout, shared across all pages
+      children: [
+        {
+          index: true,
+          // pass the class or function directly for internal instantiation
+          Component: Home,
         },
-      },
-      {
-        path: "contact",
-        // setup a lazy route in one line using promise chaining
-        lazy: async () =>
-          import("./pages/Contact").then((m) => ({ Component: m.default })),
-      },
-      // Nested Routes
-      {
-        path: "dashboard",
-        Component: DashboardLayout,
-        children: [
-          {
-            // route to /dashboard
-            index: true,
-            Component: DashboardHome,
+        {
+          path: "about",
+          // setup a lazy route via async function to reduce initial bundle size
+          lazy: async () => {
+            const { default: About } = await import("./pages/About");
+            return { Component: About };
           },
-          {
-            // route to /dashboard/metrics
-            path: "metrics",
-            Component: DashboardMetrics,
-          },
-          {
-            // route to /dashboard/setting
-            path: "setting",
-            Component: DashboardSetting,
-          },
-        ],
-      },
-      // Layout Routes
-      {
-        Component: DashboardLayout,
-        children: [
-          {
-            path: "metrics",
-            Component: DashboardMetrics,
-          },
-          {
-            path: "setting",
-            Component: DashboardSetting,
-          },
-        ],
-      },
-      // Prefix Routes
-      {
-        path: "prefix",
-        children: [
-          {
-            // route to /prefix/metrics
-            path: "metrics",
-            Component: DashboardMetrics,
-          },
-          {
-            // route to /prefix/setting
-            path: "setting",
-            Component: DashboardSetting,
-          },
-        ],
-      },
-      // Dynamic Segment
-      // You can have multiple dynamic segments in one route path.
-      // You can have optional route segment or static segments.
-      {
-        path: "my-metrics/:metricsId?/subId?/:subId?",
-        Component: DashboardMetrics,
-      },
-      // Splat
-      // A splat is a special kind of dynamic segment that matches the rest of the URL.
-      {
-        path: "my-setting/*",
-        Component: DashboardSetting,
-      },
-      {
-        path: "*",
-        // rendering JSX elements directly makes it easier to pass props
-        element: <Error message="Page not found" />,
-      },
-    ],
+        },
+        {
+          path: "contact",
+          // setup a lazy route in one line using promise chaining
+          lazy: async () =>
+            import("./pages/Contact").then((m) => ({ Component: m.default })),
+        },
+        // Nested Routes
+        {
+          path: "dashboard",
+          Component: DashboardLayout,
+          children: [
+            {
+              // route to /dashboard
+              index: true,
+              Component: DashboardHome,
+            },
+            {
+              // route to /dashboard/metrics
+              path: "metrics",
+              Component: DashboardMetrics,
+            },
+            {
+              // route to /dashboard/setting
+              path: "setting",
+              Component: DashboardSetting,
+            },
+          ],
+        },
+        // Layout Routes
+        {
+          Component: DashboardLayout,
+          children: [
+            {
+              path: "metrics",
+              Component: DashboardMetrics,
+            },
+            {
+              path: "setting",
+              Component: DashboardSetting,
+            },
+          ],
+        },
+        // Prefix Routes
+        {
+          path: "prefix",
+          children: [
+            {
+              // route to /prefix/metrics
+              path: "metrics",
+              Component: DashboardMetrics,
+            },
+            {
+              // route to /prefix/setting
+              path: "setting",
+              Component: DashboardSetting,
+            },
+          ],
+        },
+        // Dynamic Segment
+        // You can have multiple dynamic segments in one route path.
+        // You can have optional route segment or static segments.
+        {
+          path: "my-metrics/:metricsId?/subId?/:subId?",
+          Component: DashboardMetrics,
+        },
+        // Splat
+        // A splat is a special kind of dynamic segment that matches the rest of the URL.
+        {
+          path: "my-setting/*",
+          Component: DashboardSetting,
+        },
+        {
+          path: "*",
+          // rendering JSX elements directly makes it easier to pass props
+          element: <Error message="Page not found" />,
+        },
+      ],
+    },
+  ],
+  {
+    basename: "/lab-react-router",
   },
-]);
+);
 
 function App() {
   return <RouterProvider router={router} />;
